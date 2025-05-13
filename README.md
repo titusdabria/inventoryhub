@@ -31,7 +31,7 @@ Documentation and UI components are in progress.
 
 ## 👤 Created by
 
-Titus Dabria
+Titus Dabria"/n"
 Goal: Career reboot, personal growth and newly founded discipline for knowledge.
 
 ## 🚀 Installation
