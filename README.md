@@ -15,18 +15,6 @@
 - 🔍 Search and filter functionality (coming soon)
 - 📊 Statistical reports (coming soon)
 
-## 🚀 Installation
-
-```bash
-git clone https://github.com/titusabria/inventoryhub.git
-cd inventoryhub
-composer install
-cp .env.example .env
-php artisan key:generate
-touch database/database.sqlite
-php artisan migrate
-php artisan serve
-
 ## 🧪 Tech Stack
 
 - Backend: Laravel (PHP)
@@ -45,3 +33,15 @@ Documentation and UI components are in progress.
 
 Titus Dabria
 Goal: Career reboot, personal growth and newly founded discipline for knowledge.
+
+## 🚀 Installation
+
+```bash
+git clone https://github.com/titusabria/inventoryhub.git
+cd inventoryhub
+composer install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate
+php artisan serve
