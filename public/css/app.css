@@ -1,5 +1,3 @@
-@import 'tailwindcss';
-
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
@@ -10,9 +8,10 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/* ======== ALAPÉRTELMEZETT STÍLUSOK (mindkettőre) ======== */
+/* ======== ALAPÉRTELMEZETT STÍLUSOK ======== */
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: var(--font-sans);
 }
 
 /* ======== DARK MODE ======== */
@@ -21,11 +20,9 @@ body.dark-mode {
     --bs-body-color: #f1f1f1;
     --bs-sidebar-bg: #1e1e1e;
     --bs-card-bg: #1c1c1c;
-    --bs-card-border-color: #a09e9e; /* kicsit világosabb, hogy jobban elváljon */
+    --bs-card-border-color: #3a3a3a;
     --bs-header-bg: #1a1a1a;
-}
 
-body.dark-mode {
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
 }
@@ -40,7 +37,7 @@ body.dark-mode .card {
     background-color: var(--bs-card-bg);
     color: var(--bs-body-color);
     border: 1px solid var(--bs-card-border-color);
-    box-shadow: 0 0 6px rgba(135, 135, 135, 0.604); /* halvány fényhatás */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.05);
 }
 
 body.dark-mode .header {
@@ -64,6 +61,26 @@ body.dark-mode .btn {
     border-color: #343a40;
 }
 
+body.dark-mode #ordersTable,
+body.dark-mode #ordersTable th,
+body.dark-mode #ordersTable td,
+body.dark-mode #ordersTable * {
+    color: #f1f1f1 !important;
+}
+body.dark-mode .badge.bg-warning {
+    background-color: #d39e00;
+    color: #fff;
+}
+
+body.dark-mode .badge.bg-danger {
+    background-color: #c82333;
+    color: #fff;
+}
+
+body.dark-mode .badge.bg-success {
+    background-color: #218838;
+    color: #fff;
+}
 
 /* ======== LIGHT MODE ======== */
 body.light-mode {
@@ -71,11 +88,9 @@ body.light-mode {
     --bs-body-color: #212529;
     --bs-sidebar-bg: #ffffff;
     --bs-card-bg: #ffffff;
-    --bs-card-border-color: #ced4da; /* kicsit sötétebb világos szürke */
+    --bs-card-border-color: #ced4da;
     --bs-header-bg: #ffffff;
-}
 
-body.light-mode {
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
 }
@@ -90,7 +105,7 @@ body.light-mode .card {
     background-color: var(--bs-card-bg);
     color: var(--bs-body-color);
     border: 1px solid var(--bs-card-border-color);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.03); /* halvány árnyék világos háttéren */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
 }
 
 body.light-mode .header {
@@ -112,4 +127,21 @@ body.light-mode .btn {
     color: #212529;
     background-color: #e2e6ea;
     border-color: #dee2e6;
+}
+
+body.light-mode table,
+body.light-mode table th,
+body.light-mode table td,
+body.light-mode .card table,
+body.light-mode .card th,
+body.light-mode .card td {
+    color: var(--bs-body-color);
+}
+
+body.light-mode table th {
+    background-color: #ffffff;
+}
+
+body.light-mode table tr:nth-child(even) {
+    background-color: #f1f3f5;
 }

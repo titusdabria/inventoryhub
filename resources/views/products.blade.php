@@ -38,7 +38,7 @@
             <div class="card shadow-sm h-100">
                 <div class="card-body">
                     <h5 class="card-title">{{ $product['name'] }}</h5>
-                    <p class="card-text text-muted">Category: {{ $product['category'] }}</p>
+                    <p class="card-text fst-italic">Category: {{ $product['category'] }}</p>
                     <p class="card-text">Price: ${{ $product['price'] }}</p>
                     <p class="card-text">Stock: {{ $product['stock'] }} pcs</p>
                     <div class="d-flex justify-content-end">
