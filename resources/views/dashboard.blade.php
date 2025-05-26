@@ -7,7 +7,7 @@
 @section('content')
 <div class="container-fluid">
     {{-- Felső stat kártyák --}}
-    <div class="row g-3 mb-4">
+    <div class="row gy-4 mb-4">
         <div class="col-md-3">
             <div class="card shadow-sm">
                 <div class="card-body">
@@ -42,14 +42,11 @@
         </div>
     </div>
 
-    {{-- Alsó rész: két oszlop --}}
-    <div class="row g-3 mb-4">
-        {{-- Legutóbbi rendelések --}}
+    {{-- Legutóbbi rendelések és készlethiány --}}
+    <div class="row gy-4 mb-4">
         <div class="col-md-6">
             <div class="card shadow-sm">
-                <div class="card-header">
-                    Latest Orders
-                </div>
+                <div class="card-header">Latest Orders</div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">#ORD-1001 - John Doe - $120</li>
@@ -59,13 +56,9 @@
                 </div>
             </div>
         </div>
-
-        {{-- Készlethiányos termékek --}}
         <div class="col-md-6">
             <div class="card shadow-sm">
-                <div class="card-header">
-                    Low Stock Products
-                </div>
+                <div class="card-header">Low Stock Products</div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Product A – 2 left</li>
@@ -76,12 +69,12 @@
             </div>
         </div>
     </div>
-    <div class="row g-3 mb-4">
+
+    {{-- Aktivitások és toplisták --}}
+    <div class="row gy-4 mb-4">
         <div class="col-md-12">
             <div class="card shadow-sm">
-                <div class="card-header">
-                    <h5 class="card-title">Recent Activities</h5>
-                </div>
+                <div class="card-header">Recent Activities</div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><b>2025.01.01 12:01:31</b> John added Product Z</li>
@@ -92,12 +85,11 @@
             </div>
         </div>
     </div>
-    <div class="row g-3">
+
+    <div class="row gy-4">
         <div class="col-md-6">
             <div class="card shadow-sm">
-                <div class="card-header">
-                    <h5 class="card-title">Top-Selling Products</h5>
-                </div>
+                <div class="card-header">Top-Selling Products</div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Product X - 124 sold</li>
@@ -108,9 +100,7 @@
         </div>
         <div class="col-md-6">
             <div class="card shadow-sm">
-                <div class="card-header">
-                    <h5 class="card-title">Monthly Revenue</h5>
-                </div>
+                <div class="card-header">Monthly Revenue</div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">January: $1,200</li>
