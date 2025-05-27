@@ -9,7 +9,7 @@
     {{-- Fejléc: Kereső és szűrő --}}
     <div class="row mb-4">
         <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="Search products...">
+            <input type="text" class="form-control fst-italic text-light-400" placeholder="Search products...">
         </div>
         <div class="col-md-4">
             <select class="form-select">

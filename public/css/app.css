@@ -13,7 +13,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     font-family: var(--font-sans);
 }
-
 /* ======== DARK MODE ======== */
 body.dark-mode {
     --bs-body-bg: #121212;
@@ -26,25 +25,21 @@ body.dark-mode {
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
 }
-
 body.dark-mode nav,
 body.dark-mode aside {
     background-color: var(--bs-sidebar-bg);
     color: var(--bs-body-color);
 }
-
 body.dark-mode .card {
     background-color: var(--bs-card-bg);
     color: var(--bs-body-color);
     border: 1px solid var(--bs-card-border-color);
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.05);
 }
-
 body.dark-mode .header {
     background-color: var(--bs-header-bg);
     color: var(--bs-body-color);
 }
-
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
@@ -54,13 +49,11 @@ body.dark-mode a,
 body.dark-mode .text-primary {
     color: var(--bs-body-color);
 }
-
 body.dark-mode .btn {
     color: #fff;
     background-color: #343a40;
     border-color: #343a40;
 }
-
 body.dark-mode #ordersTable,
 body.dark-mode #ordersTable th,
 body.dark-mode #ordersTable td,
@@ -71,17 +64,14 @@ body.dark-mode .badge.bg-warning {
     background-color: #d39e00;
     color: #fff;
 }
-
 body.dark-mode .badge.bg-danger {
     background-color: #c82333;
     color: #fff;
 }
-
 body.dark-mode .badge.bg-success {
     background-color: #218838;
     color: #fff;
 }
-
 /* ======== LIGHT MODE ======== */
 body.light-mode {
     --bs-body-bg: #f8f9fa;
@@ -94,25 +84,21 @@ body.light-mode {
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
 }
-
 body.light-mode nav,
 body.light-mode aside {
     background-color: var(--bs-sidebar-bg);
     color: var(--bs-body-color);
 }
-
 body.light-mode .card {
     background-color: var(--bs-card-bg);
     color: var(--bs-body-color);
     border: 1px solid var(--bs-card-border-color);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
 }
-
 body.light-mode .header {
     background-color: var(--bs-header-bg);
     color: var(--bs-body-color);
 }
-
 body.light-mode h1,
 body.light-mode h2,
 body.light-mode h3,
@@ -122,13 +108,11 @@ body.light-mode a,
 body.light-mode .text-primary {
     color: var(--bs-body-color);
 }
-
 body.light-mode .btn {
     color: #212529;
     background-color: #e2e6ea;
     border-color: #dee2e6;
 }
-
 body.light-mode table,
 body.light-mode table th,
 body.light-mode table td,
@@ -137,11 +121,54 @@ body.light-mode .card th,
 body.light-mode .card td {
     color: var(--bs-body-color);
 }
-
 body.light-mode table th {
     background-color: #ffffff;
 }
-
 body.light-mode table tr:nth-child(even) {
     background-color: #f1f3f5;
+}
+/* DARK MODE placeholder */
+body.dark-mode ::placeholder {
+    color: #aaa;
+}
+.btn-logout {
+    border: 1px solid;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    padding: 0.4rem 1rem;
+    font-weight: 500;
+}
+.btn-logout:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+body.dark-mode .btn-logout {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+body.dark-mode .btn-logout:hover {
+    background-color: #ff6b6b;
+    color: #000;
+}
+/* ===== Light mode ===== */
+body.light-mode .btn-logout {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+body.light-mode .btn-logout:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* ===== Dark mode ===== */
+body.dark-mode .btn-logout {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+body.dark-mode .btn-logout:hover {
+    background-color: #ff6b6b;
+    color: #000000;
 }

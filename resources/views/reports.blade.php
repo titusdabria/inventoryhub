@@ -40,7 +40,7 @@
             <h5 class="mb-0">Monthly Revenue Chart</h5>
         </div>
         <div class="card-body">
-            <div class="text-muted text-center py-5">
+            <div class="fst-italic text-center py-5">
                 <em>Chart placeholder – coming soon</em>
             </div>
         </div>

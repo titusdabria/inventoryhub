@@ -48,7 +48,10 @@
                 </ul>
             </div>
             <div>
-                <a href="#" class="text-danger">Logout</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                        <button type="submit" class="btn btn-sm btn-outline-danger w-100 btn-logout">Logout</button>
+                </form>
             </div>
         </nav>
 
