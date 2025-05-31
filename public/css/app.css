@@ -155,6 +155,7 @@ body.dark-mode .btn-logout:hover {
 body.light-mode .btn-logout {
     color: #dc3545;
     border-color: #dc3545;
+    background-color: #212529;
 }
 
 body.light-mode .btn-logout:hover {
@@ -164,11 +165,12 @@ body.light-mode .btn-logout:hover {
 
 /* ===== Dark mode ===== */
 body.dark-mode .btn-logout {
-    color: #ff6b6b;
-    border-color: #ff6b6b;
+    color: #dc3545;
+    background-color: #212529;
+    border-color: #dc3545;
 }
 
 body.dark-mode .btn-logout:hover {
-    background-color: #ff6b6b;
+    background-color: #dc3545;
     color: #000000;
 }
