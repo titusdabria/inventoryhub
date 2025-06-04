@@ -8,6 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TicketsController;
 
 require __DIR__.'/auth.php';
 
@@ -31,8 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products');
     Route::get('/orders', [OrderController::class, 'index'])->name('orders');
     Route::get('/reports', [ReportController::class, 'index'])->name('reports');
+    Route::get('/tickets',[TicketsController::class, 'index'])->name('tickets');
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
-
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

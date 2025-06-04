@@ -51,6 +51,9 @@
                         <a href="{{ route('reports') }}" class="nav-link text-white {{ request()->routeIs('reports') ? 'active fw-bold' : '' }}">Reports</a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ route('tickets') }}" class="nav-link text-white {{ request()->routeIs('tickets') ? 'active fw-bold' : '' }}">Tickets</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route('settings') }}" class="nav-link text-white {{ request()->routeIs('settings') ? 'active fw-bold' : '' }}">Settings</a>
                     </li>
                 </ul>
