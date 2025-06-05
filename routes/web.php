@@ -36,12 +36,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/tickets/create', [TicketsController::class, 'create'])->name('tickets.create');
     Route::post('/tickets', [TicketsController::class, 'store'])->name('tickets.store');
     Route::get('/tickets/{id}', [TicketsController::class, 'show'])->name('tickets.show');
-    Route::post('/tickets/{id}/reply', [TicketsController::class, 'reply'])->name('tickets.reply');
+    Route::post('/tickets/{ticket}/reply', [TicketsController::class, 'reply'])->name('tickets.reply');
     Route::get('/tickets/{id}/edit', [TicketsController::class, 'edit'])->name('tickets.edit');
-    Route::patch('/tickets/{id}', [TicketsController::class, 'update'])->name('tickets.update');
+    Route::post('/tickets/{id}/close', [TicketsController::class, 'close'])->name('tickets.close');
+    Route::post('/tickets/{id}', [TicketsController::class, 'update'])->name('tickets.update');
     Route::delete('/tickets/{id}', [TicketsController::class, 'destroy'])->name('tickets.destroy');
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });

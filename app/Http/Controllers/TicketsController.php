@@ -71,10 +71,9 @@ class TicketsController extends Controller
     //Closing ticket
     public function close($id){
         $ticket = Ticket::findOrFail($id);
-        $ticket->update([
-            'status'=>'closed',
-            'closed_by'=>Auth::id(),
-        ]);
-        return back()->with('success','You closed this ticket!');
+        $ticket->status = 'closed';
+        $ticket->closed_by = Auth::id();
+        $ticket->save();
+        return redirect()->route('tickets.index')->with('success', 'Ticket closed.');
     }
 }
