@@ -1,6 +1,6 @@
 {{-- resources/views/auth/login.blade.php --}}
 
-@extends('layout')
+@extends('layouts/layout')
 
 @php
     view()->share('page_title', 'Login');

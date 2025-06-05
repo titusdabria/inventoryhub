@@ -1,9 +1,7 @@
+@extends('layouts/layout')
 @php
     view()->share('page_title', 'Settings');
 @endphp
-
-@extends('layout')
-
 @section('content')
 <div class="container">
     <h4 class="mb-4">User Settings</h4>

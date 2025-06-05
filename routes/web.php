@@ -32,7 +32,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products');
     Route::get('/orders', [OrderController::class, 'index'])->name('orders');
     Route::get('/reports', [ReportController::class, 'index'])->name('reports');
-    Route::get('/tickets',[TicketsController::class, 'index'])->name('tickets');
+    Route::get('/tickets', [TicketsController::class, 'index'])->name('tickets.index');
+    Route::get('/tickets/create', [TicketsController::class, 'create'])->name('tickets.create');
+    Route::post('/tickets', [TicketsController::class, 'store'])->name('tickets.store');
+    Route::get('/tickets/{id}', [TicketsController::class, 'show'])->name('tickets.show');
+    Route::post('/tickets/{id}/reply', [TicketsController::class, 'reply'])->name('tickets.reply');
+    Route::get('/tickets/{id}/edit', [TicketsController::class, 'edit'])->name('tickets.edit');
+    Route::patch('/tickets/{id}', [TicketsController::class, 'update'])->name('tickets.update');
+    Route::delete('/tickets/{id}', [TicketsController::class, 'destroy'])->name('tickets.destroy');
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

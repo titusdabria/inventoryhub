@@ -1,4 +1,5 @@
-@extends('layout')
+@extends('layouts/layout')
+
 
 @php
     view()->share('page_title', 'Dashboard');
