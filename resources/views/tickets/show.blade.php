@@ -12,7 +12,7 @@
         <div class="mb-3">
             <strong>{{ $message->user->name }}:</strong>
             <p class="mb-1">{{ $message->message }}</p>
-            <small class="text-muted">{{ $message->created_at->diffForHumans() }}</small>
+            <small class="fst-italic">{{ $message->created_at->diffForHumans() }}</small>
         </div>
     @endforeach
 </div>

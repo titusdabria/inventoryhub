@@ -14,7 +14,7 @@ view()->share('page_title', 'Tickets');
 
 <div class="card">
     <div class="card-body p-0">
-        <table class="table mb-0 table-hover">
+        <table id="ordersTable" class="table {{session('theme' === 'dark'?'table-dark':'table-light')}}">
             <thead class="table-light">
                 <tr>
                     <th>Title</th>
@@ -28,11 +28,27 @@ view()->share('page_title', 'Tickets');
                 @foreach ($tickets as $ticket)
                     <tr>
                         <td>{{ $ticket->title }}</td>
-                        <td>{{ ucfirst($ticket->priority) }}</td>
-                        <td>{{ ucfirst($ticket->status) }}</td>
+                        <td>
+                            @php 
+                            $priorityColor = match($ticket->priority){
+                                'low' => 'info',
+                                'medium' => 'primary',
+                                'high' => 'warning',
+                                default => 'secondary'
+                            };
+                            @endphp
+                            <span class="badge bg-{{$priorityColor}}">{{ucfirst($ticket->priority)}}</span>
+                        </td>
+                        <td>
+                            @if($ticket->status === 'open')
+                                <span class="badge bg-success text-white">Opened</span>
+                            @else
+                                <span class="badge bg-danger text-white">Closed</span>
+                            @endif
+                        </td>
                         <td>{{ $ticket->created_at->diffForHumans() }}</td>
                         <td class="text-end">
-                            <a href="{{ route('tickets.show', $ticket->id) }}" class="btn btn-sm btn-outline-primary">View</a>
+                            <a href="{{ route('tickets.show', $ticket->id) }}" class="btn btn-sm btn-outline-light">View</a>
                         </td>
                     </tr>
                 @endforeach
