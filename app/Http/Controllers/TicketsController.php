@@ -25,7 +25,6 @@ class TicketsController extends Controller
     if (auth()->user()->role !== 'staff') {
         abort(403); // vagy redirect
         }
-
         return view('tickets.create');
     }
     //Storing the new ticket
@@ -74,6 +73,6 @@ class TicketsController extends Controller
         $ticket->status = 'closed';
         $ticket->closed_by = Auth::id();
         $ticket->save();
-        return redirect()->route('tickets.index')->with('success', 'Ticket closed.');
+        return redirect()->route('tickets.show', $ticket->id)->with('success', 'Ticket closed.');
     }
 }

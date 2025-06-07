@@ -24,12 +24,14 @@
             <textarea name="message" rows="4" class="form-control" required></textarea>
         </div>
         <button type="submit" class="btn btn-outline-primary">Send Reply</button>
-        @if(Auth::check() && Auth::user()->role === 'admin' && $ticket->status !== 'closed')
-            <form action="{{ route('tickets.close', $ticket->id) }}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-danger">Close Ticket</button>
-            </form>
-        @endif
     </form>
+
+    @if(Auth::check() && Auth::user()->role === 'admin')
+        <form action="{{ route('tickets.close', $ticket->id) }}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-danger">Close Ticket</button>
+        </form>
+    @endif
 @endif
+
 @endsection
